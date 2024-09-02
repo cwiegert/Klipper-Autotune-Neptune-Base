@@ -57,11 +57,10 @@ from funcsigs import signature
 from . import tmc
 ```
 ## 4) Putting all the config and stepper motor run time files in place
-  download [Link Text](
+  download [Stepper Motor config](https://github.com/cwiegert/Klipper-Autotune-Neptune-Base/blob/main/Config%20files/Neptune4Stock_tmc.cfg) to your computer, you will use Fluidd to upload to your configurations directory on the machine.
 
  ### Log into the FLUIDD ui and navigate to the Configuration Screen
-  -  Click the + button in the configuration Files section
-  -  Upload a file
+  -  Click the + button in the configuration Files section followed by **Upload a file**
   -  select the Neptune4Stock_tmc.cfg file to upload
   -  Open your printer.cfg
   -  at the top of the file, add
@@ -72,7 +71,7 @@ from . import tmc
   ### ssh into your printer using your favorite tool.  (terminal is enough here)
   run: 
   ```bash
-    wget -O /home/mks/klipper_tmc_autotune/Neptune4Base.sh https://raw.githubusercontent.com/cwiegert/klipper_tmc_autotune/main/Neptune4Base.sh
+    wget -O /home/mks/klipper_tmc_autotune/Neptune4Base.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/Neptune4Base.sh
     cd /home/mks/klipper_tmc_autotune
     bash Neptune4Base.sh
   ```
