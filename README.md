@@ -76,5 +76,5 @@ from . import tmc
     bash Neptune4Base.sh
   ```
      
-Log back into Fluidd, and modify the Neptune4Stock_tmc.cfg to set your tuning parameters.   Follow the Autotune instructions listed below.
+Log back into Fluidd, and modify the Neptune4Stock_tmc.cfg to set your tuning parameters.   The documentation for the tuning parameters are in the Readme.md at the top of the AutoTune repository linked above.
 
