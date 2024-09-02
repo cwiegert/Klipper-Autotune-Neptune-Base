@@ -12,14 +12,24 @@ The install will involve 4 main steps
 ## 1) Follow the instructions below starting at Klipper TMC Autotune
   https://github.com/andrewmcgr/klipper_tmc_autotune
 ## 2) Updating the python2 backports
-### Enum error
+  ssh into your machine.   username is mks   pwd: makerbase
+  check to make sure pip is installed by typing
+        pip --version
+  if yes, then continue on.
+  if no, install pip through the normal python2 instructions
+  run:
+  ```bash
+  sudo apt install python-pip
+  ```
+    
+### Fixing the Enum error by installing the python2 equivalent
 run:
 ```bash
 source ~/klippy-env/bin/activate
 pip install enum
 deactivate
 ```
-### Signature error
+### Fixing the Signature error by installing the python2 equivalent
 
 run:
 ```bash
@@ -29,7 +39,9 @@ deactivate
 ```
 ## 3) Modifying the autotune.py to use the new packages
   ### Change this line:
-https://github.com/andrewmcgr/klipper_tmc_autotune/blob/main/| autotune_tmc.py#L3
+Once you have installed the klipper_tmc_autotune, you will need to modify the source code on your machine and make use of the modules from teh previous step.   Unsing putty, Cyberduck ssh into your machine and navigate to the /home/mks/klipper_tmc_autotune directory.   The modification will be made to 
+          **autotune.py**
+The first lines in the file, modify as follows:
 ```python
 import math, logging, os
 from enum import Enum
@@ -44,7 +56,8 @@ from enum import Enum
 from funcsigs import signature
 from . import tmc
 ```
-## 4) getting the tmc*.py files
+## 4) Putting all the config and stepper motor run time files in place
+  download [Link Text](
 
  ### Log into the FLUIDD ui and navigate to the Configuration Screen
   -  Click the + button in the configuration Files section
