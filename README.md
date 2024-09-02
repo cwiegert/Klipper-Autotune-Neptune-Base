@@ -1,4 +1,4 @@
-# This branch is for porting Klipper TMC Autotune to support the ELEGOO base image for the Neptune 4 series printers.
+# Enabling Klipper TMC Autotune on the ELEGOO base Klipper image for the Neptune 4 series printers.
 Because the base image is on python2, there are several install steps necessary to allow autotune to run.   This repository leverages everything in the Klipper Autotune and has the additional instructions/content and stepper motor settings for the out of the box Neptune 4 printers.
 
 The configuration file loaded through the Fluidd interface is an extension of the motors_database.cfg listed below, contaning the custom motor configuration for the Neptune 4, Neptune 4+, Neptune 4Pro and Neptune 4Max stepper motors. Be sure to use the correct motor/autoTune combination when you configure this file for your specific printer.
