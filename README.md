@@ -71,7 +71,8 @@ from . import tmc
   ### ssh into your printer using your favorite tool.  (terminal is enough here)
   run: 
   ```bash
-    wget -O /home/mks/klipper_tmc_autotune/Neptune4Base.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/Neptune4Base.sh
+    wget -O /home/mks/klipper_tmc_autotune/Neptune4Base.sh wget https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/shell%20scripts/Neptune4Base.sh
+
     cd /home/mks/klipper_tmc_autotune
     bash Neptune4Base.sh
   ```
