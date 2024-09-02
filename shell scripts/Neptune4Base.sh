@@ -25,8 +25,8 @@ DEST_DIR="/home/mks/klipper_tmc_autotune"
 mkdir -p "$DEST_DIR"
 
 # Download the files
-curl -o "$DEST_DIR/TMC_filesInstall.sh" "https://raw.githubusercontent.com/cwiegert/klipper_tmc_autotune/main/shell%20scripts/TMC_filesInstall.sh"
-curl -o "$DEST_DIR/RenameTMCfiles.sh" "https://raw.githubusercontent.com/cwiegert/klipper_tmc_autotune/main/shell%20scripts/RenameTMCfiles.sh"
+curl -o "$DEST_DIR/TMC_filesInstall.sh" "https://raw.githubusercontent.com/cwiegert/klipper-autotune-neptune-base/main/shell%20scripts/TMC_filesInstall.sh"
+curl -o "$DEST_DIR/RenameTMCfiles.sh" "https://raw.githubusercontent.com/cwiegert/klipper-autotune-neptune-base/main/shell%20scripts/RenameTMCfiles.sh"
 
 # Make the scripts executable
 chmod +x "$DEST_DIR/TMC_filesInstall.sh"
