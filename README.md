@@ -5,39 +5,13 @@ The configuration file loaded through the Fluidd interface is an extension of th
 
 The install will involve 4 main steps
   1)  Install the base Klipper_TMC_Autotue 
-  2)  Update the python2 backports for the packages enum and inspect
-  3)  Modifying the autotune.py code to use the python2 packages (or we can push the edited file from this repo)
-  4)  installing the tmc*.py files which are compatible with the Autotune.py code
+  2)  Modifying the autotune.py code to use the python2 packages (or we can push the edited file from this repo)
+  3)  installing the python2 backport modules and the tmc*.py files which are compatible with the Autotune.py code
 
 ## 1) Follow the instructions below starting at Klipper TMC Autotune
   https://github.com/andrewmcgr/klipper_tmc_autotune
-## 2) Updating the python2 backports
-  ssh into your machine.   username is mks   pwd: makerbase
-  check to make sure pip is installed by typing
-        pip --version
-  if yes, then continue on.
-  if no, install pip through the normal python2 instructions
-  run:
-  ```bash
-  sudo apt install python-pip
-  ```
     
-### Fixing the Enum error by installing the python2 equivalent
-run:
-```bash
-source ~/klippy-env/bin/activate
-pip install enum
-deactivate
-```
-### Fixing the Signature error by installing the python2 equivalent
-
-run:
-```bash
-source ~/klippy-env/bin/activate
-pip install funcsigs
-deactivate
-```
-## 3) Modifying the autotune.py to use the new packages
+## 2) Modifying the autotune.py to use the new packages
   ### Change this line:
 Once you have installed the klipper_tmc_autotune, you will need to modify the source code on your machine and make use of the modules from teh previous step.   Unsing putty, Cyberduck ssh into your machine and navigate to the /home/mks/klipper_tmc_autotune directory.   The modification will be made to 
           **autotune.py**
@@ -56,7 +30,7 @@ from enum import Enum
 from funcsigs import signature
 from . import tmc
 ```
-## 4) Putting all the config and stepper motor run time files in place
+## 3) Installing the python2 backport modules and putting all the config and stepper motor run time files in place
   download [Stepper Motor config](https://github.com/cwiegert/Klipper-Autotune-Neptune-Base/blob/main/Config%20files/Neptune4Stock_tmc.cfg) to your computer, you will use Fluidd to upload to your configurations directory on the machine.
 
  ### Log into the FLUIDD ui and navigate to the Configuration Screen

@@ -18,6 +18,21 @@ countdown() {
     done
     echo "Restarting now!"
 }
+
+#  Fixing the enum error by installing a python2 back ported version of enum. (enum34)
+source ~/klippy-env/bin/activate
+pip install enum
+deactivate
+echo "installed the fix for the enum error"
+
+
+#Fixing the signature error by installing the funcsigs package to replace the inspect package
+source ~/klippy-env/bin/activate
+pip install funcsigs
+deactivate
+echo "installed the fix for teh signature error"
+
+
 # Define the destination directory
 DEST_DIR="/home/mks/klipper_tmc_autotune"
 
