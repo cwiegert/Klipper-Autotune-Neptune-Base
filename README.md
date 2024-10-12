@@ -4,7 +4,7 @@ Because the base image is on python2, there are several install steps necessary 
 The configuration file loaded through the Fluidd interface is an extension of the motors_database.cfg listed below, contaning the custom motor configuration for the Neptune 4, Neptune 4+, Neptune 4Pro and Neptune 4Max stepper motors. Be sure to use the correct motor/autoTune combination when you configure this file for your specific printer.
 
 The install will involve 3 main steps
-  1)  Install the base Klipper_TMC_Autotue 
+  1)  Install the base Klipper_TMC_Autotue files, but do not complete the configuration, the config referenced in the git will be replaced with configuration below.
   2)  Modifying the autotune.py code to use the python2 packages (or we can push the edited file from this repo)
   3)  installing the python2 backport modules and the tmc*.py files which are compatible with the Autotune.py code
 
