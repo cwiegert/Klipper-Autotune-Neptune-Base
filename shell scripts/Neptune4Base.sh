@@ -42,10 +42,12 @@ mkdir -p "$DEST_DIR"
 # Download the files
 curl -o "$DEST_DIR/TMC_filesInstall.sh" "https://raw.githubusercontent.com/cwiegert/klipper-autotune-neptune-base/main/shell%20scripts/TMC_filesInstall.sh"
 curl -o "$DEST_DIR/RenameTMCfiles.sh" "https://raw.githubusercontent.com/cwiegert/klipper-autotune-neptune-base/main/shell%20scripts/RenameTMCfiles.sh"
+curl -o "$DEST_DIR/Undo_TMCRename.sh" "https://raw.githubusercontent.com/cwiegert/klipper-autotune-neptune-base/main/shell%20scripts/Undo_TMCRename.sh"
 
 # Make the scripts executable
 chmod +x "$DEST_DIR/TMC_filesInstall.sh"
 chmod +x "$DEST_DIR/RenameTMCfiles.sh"
+chmod +x "$DEST_DIR/Undo_TMCRename.sh"
 
 echo "Files have been downloaded and made executable in $DEST_DIR"
 echo "Backing up the base ELEGOO stepper files"

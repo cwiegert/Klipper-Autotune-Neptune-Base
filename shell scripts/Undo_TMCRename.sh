@@ -16,12 +16,12 @@ DIR="/home/mks/klipper/klippy/extras"
 #deleting the current TMC*.py files so the backup's can be renamed
 echo "renaming current TMC files to a TMC*.py.py3bkp"
 for FILE in "$DIR"/tmc*.py; do
-echo "renaming file --> $FILE back to $File.py.py3bkp "
     # Check if the file exists (this handles the case where no files match the pattern)
     if [ -e "$FILE" ]; then
         # Rename the file and adding a py3bkp designation
-        mv "$FILE" "${FILE%.py.py3bkp}"
-        echo "Renamed $FILE to ${FILE%.py.py3bkp}"
+        echo "     renaming $FILE to ${FILE}.py3bkp"
+        mv "$FILE" "${FILE}.py3bkp"
+        echo "Renamed $FILE to ${FILE}.py3bkp"
     else
         echo "No files found matching tmc*.py"
     fi
@@ -34,9 +34,14 @@ echo "renaming file --> $FILE back to the active version "
     # Check if the file exists (this handles the case where no files match the pattern)
     if [ -e "$FILE" ]; then
         # Rename the file by removing the .bkp desitnation
-        mv "$FILE" "${FILE%.py}"
-        echo "Renamed $FILE to ${FILE%.py}"
+        mv "$FILE" "${FILE%.bkp}"
+        echo "Renamed $FILE to ${FILE}.py"
     else
         echo "No files found matching tmc*.py.bkp"
     fi
 done
+
+read -p "Do you want to delete the uninstalled python3 files? (y/n) "  REMOVE
+if [ $REMOVE = 'y' ] || [ $REMOVE = 'Y' ]; then
+    rm "$DIR"/tmc*.py.py3bkp
+fi
