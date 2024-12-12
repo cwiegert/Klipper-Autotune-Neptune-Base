@@ -15,7 +15,7 @@ The install will involve 3 main steps
     
 ## 2) Modifying the autotune.py to use the new packages
   ### Change this line:
-Once you have installed the klipper_tmc_autotune, you will need to modify the source code on your machine and make use of the modules from teh previous step.   Unsing putty, Cyberduck ssh into your machine and navigate to the /home/mks/klipper_tmc_autotune directory.   Use the appropriate tool like nano, vi or vim to edit  
+Once you have installed the klipper_tmc_autotune, you will need to modify the source code on your machine and make use of the modules from the previous step.   Unsing putty or Cyberduck ssh into your machine and navigate to the /home/mks/klipper_tmc_autotune directory.   Use the appropriate tool like nano, vi or vim to edit  
           **autotune_tmc.py**
 The first lines in the file, modify as follows:
 ```python
