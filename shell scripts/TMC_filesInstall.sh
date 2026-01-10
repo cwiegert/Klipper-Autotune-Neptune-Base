@@ -4,6 +4,11 @@
 #       This file will install the latest stepper driver files necessary to bring a Python2 environment up to Autotune Python3 environment
 #       Run this file AFTER running RenameTMCfiles.sh, as that file will back up the base Elegoo filenames
 #       This is an ADVANCED MOD and is not officially supported by ELEGOO 
+#       
+#       01/10/2026      @woodworker
+#           base klipper changed the tmc driver library to include a bulk_sensor.py import.   Need to install that file onto
+#           the Neptune base install as well.  
+#           added bulk_sensor.py to the file array, and is installed along with the pytyon3 versions of the tmc drivers
 
 
 # Define the target directory
@@ -15,8 +20,8 @@ mkdir -p "$TARGET_DIR"
 # Define the GitHub base URL for the repository
 REPO_URL="https://raw.githubusercontent.com/Klipper3d/klipper/master/klippy/extras"
 
-# List of files to download (tmc*.py files)
-FILES=("tmc2208.py" "tmc2209.py" "tmc2660.py" "tmc2130.py" "tmc5160.py" "tmc.py" "tmc2240.py" "tmc_uart.py")
+# List of files to download (tmc*.py files).   01/10/2026 - added bulk_sensor.py to file array
+FILES=("tmc2208.py" "tmc2209.py" "tmc2660.py" "tmc2130.py" "tmc5160.py" "tmc.py" "tmc2240.py" "tmc_uart.py" "bulk_sensor.py")
 
 # Download each file
 for FILE in "${FILES[@]}"; do

@@ -3,6 +3,13 @@
 #       part of the Autotune uninstall for a base Neptuen 4 Elegoo printer image
 #       this is the first part of installing updated driver files for the portability of Autotune (python3) to the base Elegoo image (python2)
 #       use at your own risk, this is an ADVANCED MOD, and is not officially supported by ELEGOO
+#
+#       01/10/2026      @woodworker
+#           base klipper changed the tmc driver library to include a bulk_sensor.py import.   Need to install that file onto
+#           the Neptune base install as well.  
+#           added bulk_sensor.py to the file array, and is installed along with the pytyon3 versions of the tmc drivers
+#           DELETING the file on uninstall of autotune
+
 
 #!/bin/bash
 
@@ -44,4 +51,6 @@ done
 read -p "Do you want to delete the uninstalled python3 files? (y/n) "  REMOVE
 if [ $REMOVE = 'y' ] || [ $REMOVE = 'Y' ]; then
     rm "$DIR"/tmc*.py.py3bkp
+    # 01/10/2026 - remove bulk_sensor from install
+    rm "$DIR"/bulk_sensor.py
 fi
