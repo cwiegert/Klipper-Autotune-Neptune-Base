@@ -10,7 +10,7 @@ The install will involve 3 main steps
   2)  Modifying the autotune.py code to use the python2 packages (or we can push the edited file from this repo)
   3)  installing the python2 backport modules and the tmc*.py files which are compatible with the Autotune.py code
 
-## 1) Follow the instructions below starting at Klipper TMC Autotune
+## 1) Run this single command instead of installing from the TMC_Autotune git repo.   This wget command replaces the install file
   ## Modified 1/10/2026, run this install command and install file instead of the adnrewmcgr install script
   ```
     wget -O ~/install-Elegoo-Firmware.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/shell%20scripts/install-Elegoo-Firmware.sh && bash ~/install-Elegoo-Firmware.sh
