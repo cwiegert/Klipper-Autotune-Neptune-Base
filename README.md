@@ -13,7 +13,7 @@ The install will involve 3 main steps
 ## 1) Follow the instructions below starting at Klipper TMC Autotune
   ## Modified 1/10/2026, run this install command and install file instead of the adnrewmcgr install script
   ```
-    wget -O ~/install.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/shell%20scripts/install.sh && bash ~/install.sh
+    wget -O ~/install-Elegoo-Firmware.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/shell%20scripts/install-Elegoo-Firmware.sh && bash ~/install-Elegoo-Firmware.sh
   ```  
   ### Documentation for all the base functionality can be found here
 https://github.com/andrewmcgr/klipper_tmc_autotune
