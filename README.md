@@ -15,8 +15,8 @@ The install will involve 3 main steps
   ```
     wget -O ~/install.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/shell%20scripts/install.sh && bash ~/install.sh
   ```  
-  
-  https://github.com/andrewmcgr/klipper_tmc_autotune
+  ### Documentation for all the base functionality can be found here
+       https://github.com/andrewmcgr/klipper_tmc_autotune
     
 ## 2) Modifying the autotune.py to use the new packages
   ### Change this line:
