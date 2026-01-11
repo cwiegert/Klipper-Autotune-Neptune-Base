@@ -11,7 +11,7 @@ The install will involve 3 main steps
   3)  installing the python2 backport modules and the tmc*.py files which are compatible with the Autotune.py code
 
 ## 1) Follow the instructions below starting at Klipper TMC Autotune
-  # Modified 1/10/2026, run this install command and install file instead of the adnrewmcgr install script
+  ## Modified 1/10/2026, run this install command and install file instead of the adnrewmcgr install script
   ```
     wget -O ~/install.sh https://raw.githubusercontent.com/cwiegert/Klipper-Autotune-Neptune-Base/main/shell%20scripts/install.sh && bash ~/install.sh
   ```  
